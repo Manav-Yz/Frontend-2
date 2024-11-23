@@ -1,26 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.querySelector(".blog-group");
-  if (blogContainer) {
-      blogPosts.forEach((post) => {
-          const blogItem = document.createElement("div");
-          blogItem.classList.add("blog-er");
-          blogItem.setAttribute("data-title", post.title.toLowerCase());
+  
+  // Fetch blogs from Firebase Function
+  const fetchBlogs = async () => {
+    try {
+      const response = await fetch("https://<Reactive>.cloudfunctions.net/getBlogs"); // Replace with your Firebase function URL
+      if (!response.ok) {
+        throw new Error(`Error fetching blogs: ${response.statusText}`);
+      }
+      const blogs = await response.json(); // Blogs fetched from the backend
+      renderBlogs(blogs);
+    } catch (error) {
+      console.error("Failed to fetch blogs:", error.message);
+    }
+  };
 
-          blogItem.innerHTML = `
-              <a href="blogpost.html?post=${post.id}" class="blog-link">
-                  <img src="${post.imageUrl}" alt="${post.imageAlt}" class="blog-image" />
-                  <div class="blog-details">
-                      <h4 class="blog-title">${post.title}</h4>
-                      <p class="blog-description">${post.description}</p>
-                  </div>
-              </a>
-          `;
-          blogContainer.appendChild(blogItem);
+  // Render Blogs in the DOM
+  const renderBlogs = (blogs) => {
+    if (blogContainer) {
+      blogs.forEach((post) => {
+        const blogItem = document.createElement("div");
+        blogItem.classList.add("blog-er");
+        blogItem.setAttribute("data-title", post.title.toLowerCase());
+
+        blogItem.innerHTML = `
+          <a href="blogpost.html?post=${post.id}" class="blog-link">
+            <img src="${post.imageUrl}" alt="${post.imageAlt}" class="blog-image" />
+            <div class="blog-details">
+              <h4 class="blog-title">${post.title}</h4>
+              <p class="blog-description">${post.description}</p>
+            </div>
+          </a>
+        `;
+        blogContainer.appendChild(blogItem);
       });
-  } else {
+    } else {
       console.error("Blog container not found! Ensure .blog-group exists in the HTML.");
-  }
+    }
+  };
 
+  // Call fetchBlogs to get and render blogs
+  fetchBlogs();
 
   // Search Functionality
   const searchBar = document.getElementById("search-bar");
@@ -39,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("Search bar not found! Ensure #search-bar exists in the HTML.");
   }
-
 });
+
 
 
