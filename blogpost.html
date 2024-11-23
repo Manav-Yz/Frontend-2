@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipsis</title>
+    <link rel="stylesheet" href="Styles/common.css">
+    <link rel="stylesheet" href="Styles/blog.css">
+    <link rel="stylesheet" href="Styles/Respo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo">
+            <a href="#">YourLogo</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#books-table">Books</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#upcoming">Upcoming</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+          <div class="navbar-buttons">
+            <button id="theme-toggle" aria-label="Toggle Theme"><img src="img\theme.svg" alt="Theme" id="theme-image"></button>
+            <button id="user-account" aria-label="User Account"></button>
+          </div>
+        </div>
+      </nav>
+ 
+      <main class="blog-post">
+        <!-- Main Blog Content -->
+        <section class="post-section">
+          <button id="backButton">Go Back</button>
+          <div class="page">
+            <div class="post-title-section">
+              <h1 class="post-title">Blog Post Title</h1>
+              <div class="post-meta">
+                <span class="author">Author</span> | <span class="date">Date</span>
+              </div>
+            </div>
+      
+            <article class="post-content">
+              <p>Loading content...</p>
+            </article>
+          </div>
+          <button id="backButton">Go Back</button>
+        </section>
+      
+        <!-- Related Blogs -->
+        <aside class="related-blogs">
+          <h3>Related Blogs</h3>
+          <div class="related-blog-list"></div>
+        </aside>
+      </main>
+      
+      <!-- Like and Share Section -->
+      <section class="like-share-section">
+        
+        <button id="likeButton" aria-label="Like"><span id="likeCount">0</span><img src="img/like-white-holo.svg" alt="Like Icon" /></button>
+        <button id="shareButton" aria-label="Share"><img src="img/share-white.svg" alt="Share Icon" /></button>
+      </section>
+      
+      <!-- Comments Section -->
+      <section class="comments-section">
+        <h2>Comments</h2>
+        <div class="comments-container"></div>
+        <div class="comment-form">
+          <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+          <button id="submitComment">Post Comment</button>
+        </div>
+      </section>
+      
+<footer class="site-footer">
+  <div class="footer-logo">
+    <a href="#"><h1>Your Logo</h1></a>
+    <p>Exploring Stories Beyond Imagination</p>
+  </div>
+
+  <div class="footer-columns">
+    <!-- Column 1: Related Links -->
+    <div class="footer-column">
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Books</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2: Social Links -->
+    <div class="footer-column">
+      <h3>Social Links</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Reference Page -->
+    <div class="footer-column">
+      <h3>Reference Page</h3>
+      <ul>
+        <li><a href="#">API Documentation</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Most Searched -->
+    <div class="footer-column">
+      <h3>Most Searched</h3>
+      <ul>
+        <li><a href="#">Reality Cube: Fate</a></li>
+        <li><a href="#">Upcoming Events</a></li>
+        <li><a href="#">Author's Blog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Reality Cube Series. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="Functions/data.js"></script>
+<script src="Functions/blogpost.js"></script>
+<script src="Functions/global.js"></script>
+
+
+</body>
+</html>

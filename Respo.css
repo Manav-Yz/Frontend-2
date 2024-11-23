@@ -1,0 +1,85 @@
+/* Navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden for mobile; can toggle with JS */
+  }
+
+  .navbar-buttons {
+    gap: 0.3rem;
+  }
+}
+/*home section*/
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+      font-size: var(--font-size-h2);
+    }
+  
+    .hero-content p {
+      font-size: var(--font-size-p);
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
+  }
+/*about*/
+  @media screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image img {
+      margin: 0 auto;
+    }
+  }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .document-page {
+    padding: 1.5rem;
+  }
+
+  .document-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-block h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .newsletter-form {
+    padding: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .email-input {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 300px;
+  }
+}

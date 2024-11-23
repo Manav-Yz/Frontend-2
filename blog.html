@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipsis</title>
+    <link rel="stylesheet" href="Styles/common.css">
+    <link rel="stylesheet" href="Styles/blog.css">
+    <link rel="stylesheet" href="Styles/Respo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo">
+            <a href="#">YourLogo</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#books-table">Books</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#upcoming">Upcoming</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+          <div class="navbar-buttons">
+            <button id="theme-toggle" aria-label="Toggle Theme"><img src="img\theme.svg" alt="Theme" id="theme-image"></button>
+            <button id="user-account" aria-label="User Account"></button>
+          </div>
+        </div>
+      </nav>
+      <section class="blog-header">
+        <input type="text" id="search-bar" placeholder="Search blog posts..." />
+      </section>
+      
+      <section class="blogs">
+        <h2>Discover the Latest in...</h2>
+        <div class="blog-contents">
+          <h4>More about the world</h4>
+          <div class="latest-upload">
+            <div class="blog-group">
+              <!-- Blog items dynamically generated here -->
+            </div>
+            <a href="#more-blogs" class="more-blogs-link">More Blogs</a>
+          </div>
+        </div>
+      </section>
+      
+           
+      <footer class="site-footer">
+        <div class="footer-logo">
+          <a href="#"><h1>Your Logo</h1></a>
+          <p>Exploring Stories Beyond Imagination</p>
+        </div>
+      
+        <div class="footer-columns">
+          <!-- Column 1: Related Links -->
+          <div class="footer-column">
+            <h3>Related Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Books</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 2: Social Links -->
+          <div class="footer-column">
+            <h3>Social Links</h3>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 3: Reference Page -->
+          <div class="footer-column">
+            <h3>Reference Page</h3>
+            <ul>
+              <li><a href="#">API Documentation</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 4: Most Searched -->
+          <div class="footer-column">
+            <h3>Most Searched</h3>
+            <ul>
+              <li><a href="#">Reality Cube: Fate</a></li>
+              <li><a href="#">Upcoming Events</a></li>
+              <li><a href="#">Author's Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2024 Reality Cube Series. All Rights Reserved.</p>
+        </div>
+      </footer>
+    <script src="Functions/data.js"></script>
+    <script src="Functions/global.js"></script>
+    <script type="module" src="Functions/blog.js"></script>
+
+</body>
+</html>

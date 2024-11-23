@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipsis</title>
+    <link rel="stylesheet" href="Styles/common.css">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/Respo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo">
+            <a href="#">YourLogo</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#books-table">Books</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#upcoming">Upcoming</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog-admin\src\components\AdminPage.jsx">Admin</a></li>
+          </ul>
+          <div class="navbar-buttons">
+            <button id="theme-toggle" aria-label="Toggle Theme"><img src="img\theme.svg" alt="Theme" id="theme-image"></button>
+            <button id="user-account" aria-label="User Account"></button>
+          </div>
+        </div>
+      </nav>
+
+      <section id="home" class="home-section">
+        <div class="hero-content">
+          <h1>Welcome to Reality Cube</h1>
+          <p>Your gateway to a world of imagination, stories, and endless possibilities.</p>
+          <div class="cta-buttons">
+            <a href="#books" class="btn-primary">Explore Books</a>
+            <a href="#about" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-container">
+          <div class="about-content">
+            <h2>About Reality Cube</h2>
+            <p>
+              Dive into the captivating world of *Reality Cube*, where imagination meets storytelling. Our platform is dedicated to exploring the intricacies of creative narratives, world-building, and the journey of an author bringing ideas to life. 
+            </p>
+            <p>
+              Whether you're a fan of thrilling plots, engaging characters, or innovative storytelling, you're in the right place.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="img\1730435784.png" alt="About Reality Cube">
+          </div>
+        </div>
+      </section>
+      <main>
+        <table id="books-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="center-align">Book Name</th>
+              <th class="center-align">Jay's Age</th>
+              <th class="center-align">Veer's Age</th>
+              <th class="center-align">Class</th>
+              <th class="center-align">Time Set in</th>
+              <th class="center-align">Quarter</th>
+              <th class="center-align">Publish Date</th>
+              <th class="center-align">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="center-align">1</td>
+              <td>Reality Cube</td>
+              <td class="center-align">14</td>
+              <td class="center-align">7</td>
+              <td class="center-align">10</td>
+              <td class="center-align">2019</td>
+              <td class="center-align">1</td>
+              <td class="center-align">10/10/2024</td>
+              <td class="center-align">Novel</td>
+            </tr>
+            <tr>
+              <td class="center-align">2</td>
+              <td>Reality Cube: Fate</td>
+              <td class="center-align">14</td>
+              <td class="center-align">8</td>
+              <td class="center-align">10</td>
+              <td class="center-align">2019</td>
+              <td class="center-align">1</td>
+              <td class="center-align">--</td>
+              <td class="center-align">Novel</td>
+            </tr>
+            <tr>
+              <td class="center-align">3</td>
+              <td>Reality Cube: Another World</td>
+              <td class="center-align">15</td>
+              <td class="center-align">8</td>
+              <td class="center-align">10</td>
+              <td class="center-align">2019</td>
+              <td class="center-align">2</td>
+              <td class="center-align">--</td>
+              <td class="center-align">Novel</td>
+            </tr>
+            <tr>
+              <td class="center-align">4</td>
+              <td>Veer the Child of Reality</td>
+              <td class="center-align">15</td>
+              <td class="center-align">12</td>
+              <td class="center-align">9</td>
+              <td class="center-align">2023</td>
+              <td class="center-align">2</td>
+              <td class="center-align">--</td>
+              <td class="center-align">Novel</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+
+      <section id="upcoming" class="upcoming-section"></section>
+      
+      <section id="newsletter" class="newsletter">
+        <div class="document-page">
+          <h2>Stay Updated with Our Newsletter</h2>
+          <form id="newsletter-form" class="newsletter-form">
+            <p>
+              Subscribe to our newsletter to receive the latest updates, event details,
+              and exclusive content from the <em>Reality Cube</em> series.
+            </p>
+            <div class="input-container">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                id="email-input"
+                class="email-input"
+                required
+              />
+              <span class="focus-animation"></span>
+            </div>
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>          
+          <div id="success-message" class="success-message" style="display: none;">
+            🎉 Thank you for subscribing! Check your email for updates.
+          </div>
+        </div>
+      </section>
+      
+      <footer class="site-footer">
+        <div class="footer-logo">
+          <a href="#"><h1>Your Logo</h1></a>
+          <p>Exploring Stories Beyond Imagination</p>
+        </div>
+      
+        <div class="footer-columns">
+          <!-- Column 1: Related Links -->
+          <div class="footer-column">
+            <h3>Related Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Books</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 2: Social Links -->
+          <div class="footer-column">
+            <h3>Social Links</h3>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 3: Reference Page -->
+          <div class="footer-column">
+            <h3>Reference Page</h3>
+            <ul>
+              <li><a href="#">API Documentation</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 4: Most Searched -->
+          <div class="footer-column">
+            <h3>Most Searched</h3>
+            <ul>
+              <li><a href="#">Reality Cube: Fate</a></li>
+              <li><a href="#">Upcoming Events</a></li>
+              <li><a href="#">Author's Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2024 Reality Cube Series. All Rights Reserved.</p>
+        </div>
+      </footer>
+    <script src="Functions/global.js"></script>  
+    <script src="Functions/index.js"></script>
+</body>
+</html>
