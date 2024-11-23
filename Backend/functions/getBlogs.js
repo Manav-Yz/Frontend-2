@@ -118,6 +118,6 @@ The World of Eclipsis stands as a testament to the power of unity within duality
 exports.handler = async () => {
   return {
     statusCode: 200,
-    body: JSON.stringify(blogs),
+    body: JSON.stringify(blogPosts),
   };
 };
