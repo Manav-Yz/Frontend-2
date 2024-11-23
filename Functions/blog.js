@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const blogContainer = document.querySelector(".blog-group");
-  
-  // Fetch blogs from Firebase Function
+
+  // Fetch blogs from Netlify Function (not Firebase function)
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("https://<Reactive>.cloudfunctions.net/getBlogs"); // Replace with your Firebase function URL
+      // Replace <worldofcube> with your actual Netlify site name
+      const response = await fetch("https://worldofcube.netlify.app/.netlify/functions/getBlogs"); // Correct Netlify function URL
       if (!response.ok) {
         throw new Error(`Error fetching blogs: ${response.statusText}`);
       }
@@ -60,6 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Search bar not found! Ensure #search-bar exists in the HTML.");
   }
 });
-
-
-
