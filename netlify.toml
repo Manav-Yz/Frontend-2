@@ -1,11 +1,8 @@
 [build]
-  # Specify the directory for static assets (HTML, CSS, JS)
-  publish = "Frontend-2"                   # Folder where your static files are located (index.html, blog.html, etc.)
-
-  # Specify the directory for functions (serverless functions)
-  functions = "Frontend-2/Backend/functions"  # Folder where your serverless functions are located
+  publish = "."                     
+  functions = "Backend/functions"
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/:splat"  # Redirect API calls to the serverless functions
+  to = "/.netlify/functions/:splat"
   status = 200

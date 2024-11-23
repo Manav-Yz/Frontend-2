@@ -115,3 +115,5 @@ The World of Eclipsis stands as a testament to the power of unity within duality
     },
     // Add more posts as needed
 ];
+
+export default blogPosts;
