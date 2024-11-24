@@ -3,8 +3,8 @@ const path = require("path");
 
 exports.handler = async () => {
   try {
-    // Use process.cwd() to get the root directory of the deployed site
-    const filePath = path.join(process.cwd(), "Backend/data/blogs.json");
+    // Use __dirname to get the current function directory and resolve blogs.json
+    const filePath = path.join(__dirname, "../data/blogs.json");
 
     if (!fs.existsSync(filePath)) {
       throw new Error(`File not found: ${filePath}`);

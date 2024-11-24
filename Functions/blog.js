@@ -3,14 +3,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("https://worldofcube.netlify.app/.netlify/functions/getBlogs");
+      const response = await fetch("/data/blogs.json"); // Static file path
       if (!response.ok) throw new Error("Failed to fetch blogs");
       return await response.json();
     } catch (error) {
-      console.error("Error fetching blogs:", error);
+      console.error("Error fetching blogs:", error.message);
       return [];
     }
   };
+  
 
   const renderBlogs = (blogs) => {
     if (blogContainer) {
