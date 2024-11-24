@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "title": "Exploring Reality Cube",
+      "category": "Reality Cube",
+      "description": "Learn about the immersive world of Reality Cube.",
+      "imageUrl": "/img/Kavya&Jay.jpeg",
+      "imageAlt": "First Blog Image",
+      "author": "Manav YZ",
+      "date": "October 25, 2024",
+      "content": "<h2>Exploring Reality Cube</h2><p>The World of Eclipsis stands as a testament to the power of unity within duality—a realm where even in darkness, light can be found, and in light, shadows may always linger.</p>"
+    },
+    {
+      "id": 2,
+      "title": "The Story Behind AFS",
+      "category": "Reality Cube",
+      "description": "Delve into the enigmatic AFS organization.",
+      "imageUrl": "/img/coverimg.png",
+      "imageAlt": "AFS Blog Image",
+      "author": "Manav YZ",
+      "date": "October 26, 2024",
+      "content": "<h2>The Story Behind AFS</h2><p>An introduction to Blog Post 2...</p>"
+    }
+  ]
+  

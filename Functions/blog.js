@@ -1,24 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const blogContainer = document.querySelector(".blog-group");
 
-  // Fetch blogs from Netlify Function (not Firebase function)
   const fetchBlogs = async () => {
     try {
-      // Replace <worldofcube> with your actual Netlify site name
-      const response = await fetch("https://worldofcube.netlify.app/.netlify/functions/getBlogs"); // Correct Netlify function URL
-      if (!response.ok) {
-        throw new Error(`Error fetching blogs: ${response.statusText}`);
-      }
-      const blogs = await response.json(); // Blogs fetched from the backend
-      renderBlogs(blogs);
+      const response = await fetch("https://worldofcube.netlify.app/.netlify/functions/getBlogs");
+      if (!response.ok) throw new Error("Failed to fetch blogs");
+      return await response.json();
     } catch (error) {
-      console.error("Failed to fetch blogs:", error.message);
+      console.error("Error fetching blogs:", error);
+      return [];
     }
   };
 
-  // Render Blogs in the DOM
   const renderBlogs = (blogs) => {
     if (blogContainer) {
+      blogContainer.innerHTML = ""; // Clear existing blogs
       blogs.forEach((post) => {
         const blogItem = document.createElement("div");
         blogItem.classList.add("blog-er");
@@ -36,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
         blogContainer.appendChild(blogItem);
       });
     } else {
-      console.error("Blog container not found! Ensure .blog-group exists in the HTML.");
+      console.error("Blog container not found!");
     }
   };
 
-  // Call fetchBlogs to get and render blogs
-  fetchBlogs();
+  // Fetch and render blogs
+  const blogs = await fetchBlogs();
+  renderBlogs(blogs);
+
 
   // Search Functionality
   const searchBar = document.getElementById("search-bar");
